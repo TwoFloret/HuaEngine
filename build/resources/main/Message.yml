@@ -1,0 +1,71 @@
+
+MESSAGE_VERSION: 2.4
+
+COMMAND_HELP_MAIN: |-
+  &r
+  &f═════════════════════&d[&fHuaEngine-&a命令帮助&d]&f═════════════════════
+  &r
+  &6/he reload &f[&6重载插件&f]
+  &6/he version &f[&6查看插件当前版本号&f]
+  &r
+  &6/he customtitle set &f<&a玩家名&f> &f<&a称号&f> &f<&a称号后缀&f> &f[&6设置玩家指定后缀称号&f]
+  &6/he customtitle modify &f<&a玩家名&f> &f[&6给予玩家可修改称号权限&f]
+  &r
+  &6/he locktime &f<&a时间&f> &f<&a开关-true_or_false&f> &f[&6设置当前世界时间并开关锁定&f]
+  &r
+  &6/he cmdgroup &f<&a玩家名&f> &f<&a指令组&f> &f[&6执行指定的指令组&f]
+  &r
+  &6/he var add &f<&a玩家名&f> &f<&a变量名&f> &f<&a初始值&7(可选)&f> &f[&6增加玩家一个变量&f]
+  &6/he var set &f<&a玩家名&f> &f<&a变量名&f> &f<&a值&7(可选)&f> &f[&6设置玩家指定变量的值&f]
+  &6/he var remove &f<&a玩家名&f> &f<&a变量名&f> &f[&6删除玩家一个变量&f]
+  &6/he var countdown &f<&a玩家名&f> &f<&a变量名&f> &f[&6开启玩家指定变量倒计时&f]
+  &6/he var timing &f<&a玩家名&f> &f<&a变量名&f> &f[&6开启玩家指定变量计时&f]
+  &6/he var stop &f<&a玩家名&f> &f<&a变量名&f> &f[&6暂停玩家指定变量倒计时和计时&f]
+  &r
+  &f═════════════════════&d[&fHuaEngine-&a命令帮助&d]&f═════════════════════
+
+MESSAGE_NEW: "&c当前消息文件版本过老，发现新的版本 &f{0}&c，准备更新!"
+MESSAGE_UPDATE: "&a成功更新消息文件，目前版本为 &f{0}!"
+
+COMMAND_HELP_CUSTOM_TITLE: |-
+  &r
+  &6用法: /he customtitle set &f<&a玩家名&f> &f<&a称号&f> &f<&a称号后缀&f>
+  &6用法: /he customtitle modify &f<&a玩家名&f>
+COMMAND_HELP_VAR: |-
+  &r
+  &6用法: /he var add &f<&a玩家名&f> &f<&a变量名&f> &f<&a初始值&f>
+  &6用法: /he var set &f<&a玩家名&f> &f<&a变量名&f> &f<&a值&f>
+  &6用法: /he var remove &f<&a玩家名&f> &f<&a变量名&f>
+  &6用法: /he var countdown &f<&a玩家名&f> &f<&a变量名&f>
+  &6用法: /he var timing &f<&a玩家名&f> &f<&a变量名&f>
+  &6用法: /he var stop &f<&a玩家名&f> &f<&a变量名&f>
+COMMAND_HELP_LOCK_TIME: "&6用法: /he locktime &f<&a时间&f> &f<&a开关-true or false&f>"
+COMMAND_HELP_CMD_GROUP: "&6用法: /he cmdgroup &f<&a玩家名&f> &f<&a指令组&f>"
+COMMAND_UNKNOWN_SUBCOMMAND: "&c未知的子命令: &b{0}，&c请输入 &6/he help &c获取帮助."
+COMMAND_NUMBER_ILLEGALITY: "&c数值不合法: &6{0}"
+
+PLAYER_HAS_PERMISSION: "&c你需要权限 &6{0} &c才能执行该指令!"
+PLAYER_NO_EXIST: "&cId为 &6{0} &c的玩家不存在，请重新输入正确的Id."
+
+CUSTOM_TITLE_NO_PERMISSION: "&c你没有权限 &6{0} 自定义称号."
+CUSTOM_TITLE_SUCCESS_SET: "&a成功将称号设置为: &r{0}"
+CUSTOM_TITLE_CANT_REPEAT_SET: "&c你已设置自定义称号，请勿重复设置称号!"
+CUSTOM_TITLE_CANT_EDIT_TITLE: "&c你现在没有修改称号的权限."
+CUSTOM_TITLE_EXIST_EDIT_PERMISSION: "&a你已经拥有修改称号的权限，无需再次给予."
+CUSTOM_TITLE_GET_EDIT_PERMISSION: "&a成功获取一次修改自定义称号的权限!"
+
+CMD_GROUP_UNKNOWN: "&cId为 &6{0} &c的指令组不存在，请输入正确的Id."
+
+VAR_UNKNOWN: "&cId为 &6{0} &c的变量不存在，请输入正确的Id."
+
+RULE_TP_LEVEL_LIMIT: "&c你需要 &6{0}级 &c才能传送至 &r{1} &c世界."
+RULE_ATTACK_CANCELLED: "&c你没有权限进行左键攻击造成伤害."
+RULE_OPEN_CANCELLED: "&c你没有权限进行打开这个容器的操作."
+RULE_PUT_OFFHAND_CANCELLED: "&6你不可以把这个物品放入副手."
+RULE_BLOCK_BREAK_CANCELLED: "&c你没有权限在这个世界破坏方块!"
+RULE_BLOCK_PLACE_CANCELLED: "&c你没有权限在这个世界放置方块!"
+RULE_HANGING_BREAK_CANCELLED: "&c你没有权限在这个世界破坏悬挂物!"
+RULE_DROP_ITEM_CANCELLED: "&c你没有权限在这个世界丢弃物品!"
+
+
+PLUGIN_RELOAD: "&a插件重载成功!"

@@ -1,0 +1,26 @@
+translate-animation:
+  direction: y
+  delay: 0
+  distance: -3
+  duration: 1500
+  cycleCount: 1
+  fixed: true
+
+scale-animation-start:
+  delay: 0
+  fromScale: 0.5
+  toScale: 1.5
+  duration: 1100
+  cycleCount: 1
+  fixed: true
+  resetTime: 0
+
+scale-animation-end:
+  delay: 1100
+  fromScale: 1
+  toScale: 0.1
+  duration: 400
+  cycleCount: 1
+  fixed: true
+  resetTime: 0
+

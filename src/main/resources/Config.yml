@@ -1,0 +1,11 @@
+# 开启调试
+debug: true
+# 插件消息前缀
+message-prefix: "&d[&fHuaEngine&d]"
+# 是否开启自定义变量功能，用不到的话关闭可以减少消耗
+# 变量在为0的时候会无法倒计时，请悉知
+var-enable: false
+# 是否开启mm刷怪点papi变量读取，用不到的话关闭可以减少消耗
+spawner-enable: false
+# 是否取消神话技能视图附带ap伤害
+skill-ap-damage: false

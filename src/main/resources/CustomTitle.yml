@@ -1,0 +1,9 @@
+
+# 称号后缀配置
+tag-list:
+  神:
+    tag-name: "&6神"
+    permission: "lv.100"
+  帝:
+    tag-name: "&6帝"
+    permission: "lv.200"

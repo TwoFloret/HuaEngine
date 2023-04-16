@@ -1,0 +1,39 @@
+############ 禁止玩家破坏、放置、交互方块 ############
+# 给予 HuaEngine.build 权限节点就可以破坏和放置方块了
+ban-block-build:
+  enable: false # 是否开启
+  reverse: false # 是否开启反向禁止，开启的话下面填入的世界为不需要禁止的
+  hanging: false # 是否开启对悬挂物的禁止破坏
+  # 对此列表里的世界生效
+  list:
+    - 'world'
+############ 禁止玩家丢弃物品 ############
+# 给予 HuaEngine.drop 权限节点就可以丢弃物品了
+ban-drop-item:
+  enable: false # 是否开启
+  reverse: false # 是否开启反向禁止，开启的话下面填入的世界为不需要禁止的
+  # 对此列表里的世界生效
+  list:
+    - 'world'
+############ 禁止天气下雨(包括雷暴) ############
+ban-weather-change:
+  enable: false # 是否开启
+  reverse: false # 是否开启反向禁止，开启的话下面填入的世界为不需要禁止的
+  # 对此列表里的世界生效
+  list:
+    - 'world'
+############ 死亡不掉落物品和经验 ############
+ban-inventory-drop:
+  enable: false # 是否开启
+  reverse: false # 是否开启反向禁止，开启的话下面填入的世界为不需要禁止的
+  # 对此列表里的世界生效
+  list:
+    - 'world'
+############ 传送世界需要的玩家等级 ############
+teleport-level-limit:
+  enable: false # 是否开启
+  #世界名|需要的等级|提示显示的世界名
+  #列表中不存在的世界将默认0
+  list:
+    - 'world|10|&6主世界'
+    - 'vip|20|&4会员世界'

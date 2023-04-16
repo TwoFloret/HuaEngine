@@ -1,0 +1,8 @@
+name: HuaEngine
+version: '2.4'
+main: pers.floret.huaengine.HuaEngine
+commands:
+  huaengine:
+    aliases:
+      - he
+      - hua

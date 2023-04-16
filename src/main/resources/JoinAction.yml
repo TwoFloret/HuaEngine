@@ -1,0 +1,18 @@
+# 动作类型有以下
+# [OP]指令 --以管理员身份执行指令
+# [CONSOLE]指令 --以后台身份执行指令
+# [MESSAGE]消息 --发送一条私人消息
+# [TITLE]主标题,副标题,淡入时间,持续时间,淡出时间 --发送一条私人标题消息
+# [BROADCAST-TITLE]主标题,副标题,淡入时间,持续时间,淡出时间 --发送一条广播标题消息
+
+enable: true # 是否启用玩家加入服务器事件,填 false 即可关闭
+
+actions:
+  OP:
+    permission: "join.op"
+    first-join-action:
+      - "[BROADCAST-TITLE]&7[&6重磅消息&7],&a玩家&e%player%&a第一次进入服务器!,10,40,10<->30" # 动作<->延时[可选]
+    every-join-action:
+      - "[BROADCAST-TITLE]&7[&6重磅消息&7],&4全宇宙最帅的管理员&e%player%&a进入服务器!,10,20,10"
+      - "[CONSOLE]gamemode creative %player%"
+      - "[MESSAGE]&a欢迎&4全宇宙最帅的管理员&e%player%&a进入服务器!"

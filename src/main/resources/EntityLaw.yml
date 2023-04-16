@@ -1,0 +1,54 @@
+############ 取消实体燃烧 ############
+# name 为检测实体名称是否包含对应的值
+# type 为检测实体类型是否是对应的类型
+ban-entity-combust:
+  enable: true
+  list:
+    - 'name<->测试怪'
+    - 'type<->zombie'
+
+# 实体类型列表请看：https://jd.papermc.io/paper/1.12/org/bukkit/entity/EntityType.html
+
+############ 减少攻击红心粒子数量 ############
+reduce-damage-effect:
+  enable: false # 是否启用
+  min: 10 # 最小数量
+  max: 100 # 最大数量
+
+############ 取消左键攻击条件 ############
+ban-left-attack:
+  enable: false # 是否开启 全局开关 关闭之后下面的开关都不用管
+  main-empty-damage: true # 主手空手左键攻击伤害取消
+  main-has-lore: "远程攻击职业" # 主手包含这个lore的物品无法左键攻击
+  off-empty-damage: true # 副手空手左键攻击伤害取消
+  off-has-lore: "远程攻击职业" # 副手包含这个lore的物品无法左键攻击
+  message-enable: true #取消左键攻击伤害的时候是否提示
+
+
+# 玩家摔落伤害开关
+falling-damage: true # 是否启用,填 false 即可关闭
+# 玩家燃烧、熔岩伤害开关
+fire-damage: true # 是否启用,填 false 即可关闭
+# 玩家溺水伤害开关
+drowning-damage: true # 是否启用,填 false 即可关闭
+
+############ 禁用打开容器模块 op可以打开 ############
+# HOPPER 漏斗
+# ENCHANTMENT_TABLE 附魔台
+# ANVIL 铁砧
+# DISPENSER 发射器
+# DROPPER 投掷器
+# WORKBENCH 工作台
+# CHEST 箱子
+# TRAPPED_CHEST 陷阱箱
+# FURNACE 熔炉
+# 如果需要禁用其他容器可以去Config.yml打开debug选项
+# 然后右键方块在后台就可以看到方块id了
+ban-open-container:
+  list:
+    - ''
+
+############ 检测物品lore条件放入副手 ############
+ban-put-off:
+  reverse: false # 是否开启反向禁止，开启的话下面填入的就是白名单，也就是允许放入的
+  identifier: "禁止放入副手"
