@@ -6,6 +6,9 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+import pers.floret.huaengine.config.Rule;
 import pers.floret.huaengine.database.YamlData;
 import pers.floret.huaengine.config.JoinAction;
 import pers.floret.huaengine.runtime.DataManager;
@@ -21,6 +24,13 @@ public class PlayerListener implements Listener {
         Player player = e.getPlayer();
         new YamlData().load(player);
         joinAction(player);
+        if (Rule.get().foodLevelConsume) return;
+        if (!Rule.get().foodLevelConsumeList.contains(player.getName())) return;
+        // 创建一个饱和度效果（potion effect）
+        PotionEffect saturation = new PotionEffect(PotionEffectType.SATURATION, Integer.MAX_VALUE, 1, false, false);
+        // 给玩家应用该效果
+        player.addPotionEffect(saturation);
+        player.setFoodLevel(20);
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)

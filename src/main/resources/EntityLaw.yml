@@ -31,6 +31,11 @@ falling-damage: true # 是否启用,填 false 即可关闭
 fire-damage: true # 是否启用,填 false 即可关闭
 # 玩家溺水伤害开关
 drowning-damage: true # 是否启用,填 false 即可关闭
+# 是否消耗饱食度
+food-level-consume:
+  enable: true # 是否启用,填 false 即可关闭
+  player:
+    - 'Wuyanzhu'
 
 ############ 禁用打开容器模块 op可以打开 ############
 # HOPPER 漏斗

@@ -2,6 +2,7 @@ package pers.floret.huaengine.config;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.jetbrains.annotations.NotNull;
 import pers.floret.huaengine.HuaEngine;
 import pers.floret.huaengine.runtime.TpLimit;
 import pers.floret.huaengine.util.FileUtil;
@@ -23,6 +24,7 @@ public final class Rule {
     public boolean fallingDamage;
     public boolean fireDamage;
     public boolean drowningDamage;
+    public boolean foodLevelConsume;
     public String banPutOff;
     public boolean banPutOffReverse;
     public boolean banLeftAttack;
@@ -45,6 +47,7 @@ public final class Rule {
     public List<String> banWeatherChangeWorlds;
     public List<String> banInventoryDropWorlds;
     public List<String> banOpenContainer;
+    public List<String> foodLevelConsumeList;
 
     public Map<String, TpLimit> tpLevelLimitMap;
     private static Rule rule;
@@ -93,6 +96,8 @@ public final class Rule {
         rule.fallingDamage = entityLaw.getBoolean("falling-damage");
         rule.fireDamage = entityLaw.getBoolean("fire-damage");
         rule.drowningDamage = entityLaw.getBoolean("drowning-damage");
+        rule.foodLevelConsume = entityLaw.getBoolean("food-level-consume.enable");
+        rule.foodLevelConsumeList = entityLaw.getStringList("food-level-consume.player");
         rule.reduceDamageEffect = entityLaw.getBoolean("reduce-damage-effect.enable");
         rule.damageEffectMin = entityLaw.getInt("reduce-damage-effect.min");
         rule.damageEffectMax = entityLaw.getInt("reduce-damage-effect.max");
@@ -100,6 +105,7 @@ public final class Rule {
         return rule;
     }
 
+    @NotNull
     private static Map<String, TpLimit> setMap(List<String> list) {
         Map<String, TpLimit> map = new HashMap<>();
         list.forEach( key -> {
